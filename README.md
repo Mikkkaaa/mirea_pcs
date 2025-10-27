@@ -1,16 +1,36 @@
-# ui_practice_mihalev
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#  Практическое занятие №3
+## Михалев Даниил ЭФБО-09-23
+#  Скриншот работающего приложения с текстом, кнопкой и контейнером с изменёнными цветами и стилями текста
+#<img width="464" height="966" alt="Снимок экрана 2025-10-27 222553" src="https://github.com/user-attachments/assets/3d0c4fcc-d5d2-4374-975a-8b4f0d2e75e1" />
+# Использованные виджеты
+## Базовые виджеты приложения
+### MaterialApp - корневой виджет приложения, обеспечивающий Material Design
+### Scaffold - базовая структура экрана с AppBar и body
+## Виджеты компоновки
+### Column - для вертикального расположения элементов
+###  Row - для горизонтального расположения иконок
+###  Center - для центрирования содержимого контейнера
+###  Виджеты содержимого
+### AppBar - верхняя панель приложения
+### Text - текстовые элементы с приветствием
+### ElevatedButton - интерактивная кнопка
+### Container - контейнер с заданными размерами и цветом
+### Icon - графические иконки
+## Виджеты отступов
+SizedBox - для создания фиксированных отступов между элементами
+## Работа со стилями и цветами
+Изменение цветов элементов
+### AppBar: установлен синий цвет через backgroundColor: Colors.blue
+### Текст приветствия: зелёный цвет color: Colors.green
+### Кнопка: синий фон через backgroundColor: Colors.blue
+### Контейнер: кастомный голубой цвет Color.fromARGB(255, 9, 230, 230)
+### Иконки: жёлтый (Colors.amber) и красный (Colors.red) цвета
+Размер шрифта:
+### Основной текст: fontSize: 24
+### Текст в контейнере: fontSize: 18
+### Жирность: FontWeight.bold для заголовка
+### Цвет текста: белый для текста в контейнере для контраста
+## Компоновка элементов
+### Вертикальное выравнивание: Column с последовательным расположением
+### Горизонтальное выравнивание: Row с MainAxisAlignment.center
+### Отступы: SizedBox с фиксированными размерами 20 пикселей
