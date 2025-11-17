@@ -1,16 +1,50 @@
-# flutter_create_state_practice_mihalev
+#  Практическое занятие №4
+## Михалев Даниил ЭФБО-09-23
+#  Скриншот работающего приложения с кнопками и счётчиком.
+# <img width="445" height="951" alt="Снимок экрана 2025-11-17 125748" src="https://github.com/user-attachments/assets/dcbfc236-069c-4dd2-9c08-a71edf1c738d" />
+#   Скриншот при значении счётчика > 10.
+#<img width="438" height="951" alt="Снимок экрана 2025-11-17 125753" src="https://github.com/user-attachments/assets/2b5ed292-455e-4454-86fd-c0f667b7812e" />
+#   Скриншот после сброса.
+#<img width="445" height="946" alt="Снимок экрана 2025-11-17 125758" src="https://github.com/user-attachments/assets/159bf89a-fa13-4840-8bec-8a7af5920e4a" />
+# Использованные виджеты
+## Основные виджеты компоновки:
+Column - для вертикального расположения элементов интерфейса
+Container - для создания контейнеров с фоном и отступами вокруг текста и кнопок
+Padding - для задания внутренних отступов всего экрана
+SizedBox - для создания фиксированных промежутков между элементами
+##Виджеты управления состоянием:
+StatefulWidget — основной виджет экрана (CounterScreen)
+State<CounterScreen> — класс _CounterScreenState, в котором хранится и управляется изменяемое состояние (int counter)
+## Интерактивные виджеты:
+ElevatedButton — две кнопки («Увеличить» и «Сбросить»)
+GestureDetector — обёртка вокруг кнопки «Увеличить» для обработки долгого нажатия (onLongPress)
+## Декоративные виджеты
+Scaffold — основа экрана с AppBar и body
+AppBar — верхняя панель с заголовком «Практика №4»
+Padding — внешние отступы всего содержимого (24 dp со всех сторон)
+Column — вертикальная компоновка элементов
+SizedBox — вертикальные отступы между элементами (50 dp и 20 dp)
+Container — обёртки вокруг кнопок с цветным фоном и скруглёнными углами
+Text — отображение текущего значения счётчика с увеличенным шрифтом
+# Реализация обновления состояния
+```
+class CounterScreen extends StatefulWidget {
+   @override
+  _CounterScreenState createState() => _CounterScreenState();
+}
 
-A new Flutter project.
+class _CounterScreenState extends State<CounterScreen> {
+  int counter = 0; 
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  void increment() {
+    setState(() {     
+      counter++;     
+    });              
+  }
+}
+```
+# Какие события обрабатывались:
+## В приложении реализована обработка следующих пользовательских событий:
+### onPressed — обычное нажатие на кнопку "Увеличить": Увеличивает счётчик на 1.
+### onLongPress — долгое нажатие (удержание) на кнопке "Увеличить": Увеличивает счётчик сразу на 10. Это удобно для быстрого изменения значения.
+### onPressed на кнопке "Сбросить": Обнуляет значение счётчика (counter = 0).
